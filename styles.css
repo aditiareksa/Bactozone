@@ -196,43 +196,42 @@ footer {
 
 body.halaman-sejarah {
     background-color: #E4E4E4;
-
-        
 .section-jenis {
-    width: 100%; /* Memaksa section melebar penuh dari kiri ke kanan */
+    width: 100%; /* Memaksa section melebar penuh dari ujung kiri ke kanan layar */
     padding: 50px 0;
     box-sizing: border-box;
-        }
-        
-        /* Pengaturan Selang-seling Warna Background */
+}
+
+/* Pengaturan warna latar belakang full-width sesuai gambar 2 */
 .bg-abu { 
     background-color: #E4E4E4 !important; 
-        }
+}
 .bg-putih { 
     background-color: #FFFFFF !important; 
-        }
+}
 
 .section-jenis h2 {
     margin-top: 0;
     font-size: 1.8rem;
     color: #222;
-        }
+}
 
-        /* SUB-SECTION KOTAK DI DALAM SECTION 1 */
+/* Sub-section kotak di dalam Section 1 */
 .sub-section-container {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-        }
+}
 .sub-section {
     background: #FFFFFF;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-        }
-        
-        /* TEMPLATE KOTAK BAKTERI */
+    border: 1px solid #E0E0E0;
+}
+
+/* Desain Template Kotak Bakteri */
 .bakteri-template {
     display: flex;
     gap: 25px;
@@ -243,7 +242,7 @@ body.halaman-sejarah {
     padding: 20px;
     align-items: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-        }
+}
 .bakteri-img-box {
     width: 140px;
     height: 140px;
@@ -255,32 +254,26 @@ body.halaman-sejarah {
     overflow: hidden;
     flex-shrink: 0;
     border: 1px solid #ccc;
-        }
+}
 .bakteri-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-        }
+}
 .bakteri-info h4 {
     margin: 0 0 5px 0;
     font-size: 1.3rem;
     color: #00796b;
-        }
+}
 .bakteri-info .nama-ilmiah {
     font-style: italic;
     color: #666;
     font-weight: 500;
     margin-bottom: 10px;
     display: block;
-        }
+}
 .bakteri-info p {
     margin: 0;
     color: #444;
     font-size: 0.95rem;
-        }
-.footer {
-    background-color: #004d40;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-        }
+}
