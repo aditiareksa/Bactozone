@@ -196,6 +196,8 @@ footer {
 
 body.halaman-sejarah {
     background-color: #E4E4E4;
+}
+
 .section-jenis {
     width: 100% !important; /* Memaksa kotak memanjang penuh dari kiri ke kanan layar */
     display: block !important;
