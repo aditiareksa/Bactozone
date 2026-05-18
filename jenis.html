@@ -4,7 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenis Bakteri - Bactozone</title>
-    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* --- STYLE UTAMA BACTOZONE --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #FFFFFF;
+        }
+        
+        /* Container untuk membungkus konten di tengah halaman */
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            max-width: 1100px;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: #5CE1E6; /* Warna toska sesuai gambar 1 kamu */
+            color: white;
+            padding: 15px 0;
+            border-bottom: 4px solid #00c2cb;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .main-logo {
+            width: 40px;
+            height: 40px;
+        }
+        .logo-area h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: white;
+            font-family: 'Arial Black', sans-serif;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        nav a:hover, nav a.active {
+            color: #004d40; /* Warna hijau gelap saat aktif/hover */
+        }
+
+        /* --- STRUKTUR SECTION FULL WIDTH (SESUAI GAMBAR 2) --- */
+        .section-jenis {
+            width: 100%; /* Memaksa section melebar penuh dari kiri ke kanan */
+            padding: 50px 0;
+            box-sizing: border-box;
+        }
+        
+        /* Pengaturan Selang-seling Warna Background */
+        .bg-abu { 
+            background-color: #E4E4E4 !important; 
+        }
+        .bg-putih { 
+            background-color: #FFFFFF !important; 
+        }
+
+        .section-jenis h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            color: #222;
+        }
+
+        /* SUB-SECTION KOTAK DI DALAM SECTION 1 */
+        .sub-section-container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .sub-section {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        }
+        
+        /* TEMPLATE KOTAK BAKTERI */
+        .bakteri-template {
+            display: flex;
+            gap: 25px;
+            margin-top: 20px;
+            background: #FFFFFF;
+            border: 1px solid #D5D5D5;
+            border-radius: 8px;
+            padding: 20px;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .bakteri-img-box {
+            width: 140px;
+            height: 140px;
+            background: #E4E4E4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 1px solid #ccc;
+        }
+        .bakteri-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .bakteri-info h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.3rem;
+            color: #00796b;
+        }
+        .bakteri-info .nama-ilmiah {
+            font-style: italic;
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .bakteri-info p {
+            margin: 0;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* RESPONSIF UNTUK HP */
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; gap: 15px; }
+            .bakteri-template { flex-direction: column; align-items: flex-start; }
+            .bakteri-img-box { width: 100%; height: 180px; }
+        }
+    </style>
 </head>
 <body>
 
