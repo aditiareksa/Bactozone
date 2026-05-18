@@ -161,6 +161,7 @@ footer {
   box-shadow: 5px 5px 0px var(--sekunder); /* Aksen Hijau */
   border: 2px solid var(--utama); /* Aksen Biru Muda */
   align-items: center;
+  background-color: #ffffff;
 }
 
 .scientist-img-box {
