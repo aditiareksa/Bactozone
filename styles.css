@@ -196,13 +196,14 @@ footer {
 
 body.halaman-sejarah {
     background-color: #E4E4E4;
+  
 .section-jenis {
-    width: 100%; /* Memaksa section melebar penuh dari ujung kiri ke kanan layar */
+    width: 100%; /* Memaksa section melebar penuh secara horizontal */
     padding: 50px 0;
     box-sizing: border-box;
 }
 
-/* Pengaturan warna latar belakang full-width sesuai gambar 2 */
+/* Pengaturan Selang-seling Warna Background Full Width */
 .bg-abu { 
     background-color: #E4E4E4 !important; 
 }
@@ -216,7 +217,7 @@ body.halaman-sejarah {
     color: #222;
 }
 
-/* Sub-section kotak di dalam Section 1 */
+/* Jarak antar sub-section kotak di dalam Section 1 */
 .sub-section-container {
     margin-top: 30px;
     display: flex;
@@ -231,7 +232,7 @@ body.halaman-sejarah {
     border: 1px solid #E0E0E0;
 }
 
-/* Desain Template Kotak Bakteri */
+/* Desain Wadah Template Kotak Bakteri */
 .bakteri-template {
     display: flex;
     gap: 25px;
@@ -276,4 +277,16 @@ body.halaman-sejarah {
     margin: 0;
     color: #444;
     font-size: 0.95rem;
+}
+
+/* Tampilan Responsif Handphone */
+@media (max-width: 768px) {
+    .bakteri-template { 
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+    .bakteri-img-box { 
+        width: 100%; 
+        height: 180px; 
+    }
 }
