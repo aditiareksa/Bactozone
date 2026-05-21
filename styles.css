@@ -268,9 +268,9 @@ body.halaman-sejarah {
     margin: 0 0 5px 0;
     font-size: 1.3rem;
     color: #00796b;
+    font-style: italic;
 }
 .bakteri-info .nama-ilmiah {
-    font-style: italic;
     color: #00796b;
     font-weight: 500;
     margin-bottom: 10px;
