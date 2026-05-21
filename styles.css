@@ -275,6 +275,7 @@ body.halaman-sejarah {
     font-weight: 500;
     margin-bottom: 10px;
     display: block;
+    font-style: italic;
 }
 .bakteri-info p {
     margin: 0;
