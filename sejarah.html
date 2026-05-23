@@ -1,3 +1,12 @@
+Ah, paham! Sori sempat salah tangkap maksud kamu sebelumnya.
+
+Jadi kamu mau strukturnya kembali bersih dengan latar belakang halaman semuanya warna putih, lalu setiap ilmuwan memiliki kotak abu-abu terpisah yang melayang di tengah (persis seperti desain awal kamu di gambar kedua, tapi kali ini dipisah per ilmuwan agar efek animasinya bisa berjalan dengan rapi).
+
+Untuk mewujudkan itu, kita harus mengembalikan struktur <section class="container scientist-section"> di luar, lalu membungkus setiap ilmuwan ke dalam kotak abu-abu tersendiri.
+
+Berikut adalah kode perbaikan total untuk sejarah.html agar sesuai dengan yang kamu inginkan:
+
+HTML
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -5,8 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sejarah Bakteri - Bactozone</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="style.css"> </head>
-<body class="halaman-sejarah">
+</head>
+<body class="halaman-sejarah" style="background-color: #FFFFFF;">
 
     <header>
         <div class="container header-content">
@@ -17,7 +26,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="sejarah.html" class="active">Sejarah</a></li>
+                    <li><a href="sejarah.html">Sejarah</a></li>
                     <li><a href="jenis.html">Jenis</a></li>
                     <li><a href="#">Tentang</a></li>
                 </ul>
@@ -25,7 +34,7 @@
         </div>
     </header>
 
-    <section class="section-jenis bg-abu" style="padding: 40px 0 20px 0;">
+    <section class="section-jenis bg-putih" style="padding: 40px 0 20px 0;">
         <div class="container hero-container" style="display: flex; align-items: center; gap: 30px;">
             <div class="hero-maskot" style="width: 140px; height: 140px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
                 <img src="maskot.png" alt="Maskot" style="width: 100%; height: 100%; object-fit: contain;">
@@ -37,102 +46,78 @@
         </div>
     </section>
     
-    <section class="section-jenis bg-putih">
-        <div class="container">
-            <div class="scientist-card">
-                <div class="scientist-img-box">
-                    <img src="antony.jpeg" alt="Antony van Leeuwenhoek" onerror="this.innerHTML='Foto Ilmuwan 1'; this.style.color='#999';">
-                </div>
-                <div class="scientist-info">
-                    <h3>1. Antony van Leeuwenhoek (1675)</h3>
-                    <p>Menemukan <i>animacula</i> pada sampel air dengan melakukan pengamatan menggunakan lensa khusus 260x. Dikenal sebagai Bapak Mikrobiologi.</p>
-                </div>
+    <section class="container scientist-section" style="background-color: #FFFFFF; padding: 20px 0;">
+        
+        <div class="scientist-card section-jenis bg-abu" style="margin-bottom: 25px; border-radius: 8px; padding: 20px;">
+            <div class="scientist-img-box">
+                <img src="antony.jpeg" alt="Antony van Leeuwenhoek" onerror="this.innerHTML='Foto Ilmuwan 1'; this.style.color='#999';">
+            </div>
+            <div class="scientist-info">
+                <h3>1. Antony van Leeuwenhoek (1675)</h3>
+                <p>Menemukan <i>animacula</i> pada sampel air dengan melakukan pengamatan menggunakan lensa khusus 260x. Dikenal sebagai Bapak Mikrobiologi.</p>
             </div>
         </div>
-    </section>
 
-    <section class="section-jenis bg-abu">
-        <div class="container">
-            <div class="scientist-card">
-                <div class="scientist-img-box">
-                    <img src="christian.jpg" alt="Christian Gottfried Erhenberg">
-                </div>
-                <div class="scientist-info">
-                    <h3>2. Christian Gottfried Erhenberg (1838)</h3>
-                    <p>Memperkenalkan kata <i>bacterium</i> yang berarti batang/tongkat karena yang ditemukan pertama kali berupa bakteri berbentuk batang.</p>
-                </div>
+        <div class="scientist-card section-jenis bg-abu" style="margin-bottom: 25px; border-radius: 8px; padding: 20px;">
+            <div class="scientist-img-box">
+                <img src="christian.jpg" alt="Christian Gottfried Erhenberg">
+            </div>
+            <div class="scientist-info">
+                <h3>2. Christian Gottfried Erhenberg (1838)</h3>
+                <p>Memperkenalkan kata <i>bacterium</i> yang berarti batang/tongkat karena yang ditemukan pertama kali berupa bakteri berbentuk batang.</p>
             </div>
         </div>
-    </section>
 
-    <section class="section-jenis bg-putih">
-        <div class="container">
-            <div class="scientist-card">
-                <div class="scientist-img-box">
-                    <img src="ernst.jpg" alt="Ernst Haeckel">
-                </div>
-                <div class="scientist-info">
-                    <h3>3. Ernst Haeckel (1866)</h3>
-                    <p>Mencetuskan 3 kingdom dari klasifikasi makhluk hidup. Kingdom protista merujuk pada semua makhluk hidup yang tidak memiliki ciri tumbuhan maupun hewan.</p>
-                </div>
+        <div class="scientist-card section-jenis bg-abu" style="margin-bottom: 25px; border-radius: 8px; padding: 20px;">
+            <div class="scientist-img-box">
+                <img src="ernst.jpg" alt="Ernst Haeckel">
+            </div>
+            <div class="scientist-info">
+                <h3>3. Ernst Haeckel (1866)</h3>
+                <p>Mencetuskan 3 kingdom dari klasifikasi makhluk hidup. Kingdom protista merujuk pada semua makhluk hidup yang tidak memiliki ciri tumbuhan maupun hewan.</p>
             </div>
         </div>
-    </section>
 
-    <section class="section-jenis bg-abu">
-        <div class="container">
-            <div class="scientist-card">
-                <div class="scientist-img-box">
-                    <img src="eduard.jpg" alt="Eduard Chatton">
-                </div>
-                <div class="scientist-info">
-                    <h3>4. Eduard Chatton (1927)</h3>
-                    <p>Membagi kingdom menjadi 4 dengan memecah protista menjadi protista prokariot dan protista eukariot.</p>
-                </div>
+        <div class="scientist-card section-jenis bg-abu" style="margin-bottom: 25px; border-radius: 8px; padding: 20px;">
+            <div class="scientist-img-box">
+                <img src="eduard.jpg" alt="Eduard Chatton">
+            </div>
+            <div class="scientist-info">
+                <h3>4. Eduard Chatton (1927)</h3>
+                <p>Membagi kingdom menjadi 4 dengan memecah protista menjadi protista prokariot dan protista eukariot.</p>
             </div>
         </div>
-    </section>
 
-    <section class="section-jenis bg-putih">
-        <div class="container">
-            <div class="scientist-card">
-                <div class="scientist-img-box">
-                    <img src="herbert.jpeg" alt="Herbert F. Copeland">
-                </div>
-                <div class="scientist-info">
-                    <h3>5. Herbert F. Copeland (1938)</h3>
-                    <p>Mengelompokkan golongan prokariot ke dalam kingdom monera dalam sistem 4 kingdom (animalia, plantae, protista dan monera).</p>
-                </div>
+        <div class="scientist-card section-jenis bg-abu" style="margin-bottom: 25px; border-radius: 8px; padding: 20px;">
+            <div class="scientist-img-box">
+                <img src="herbert.jpeg" alt="Herbert F. Copeland">
+            </div>
+            <div class="scientist-info">
+                <h3>5. Herbert F. Copeland (1938)</h3>
+                <p>Mengelompokkan golongan prokariot ke dalam kingdom monera dalam sistem 4 kingdom (animalia, plantae, protista dan monera).</p>
             </div>
         </div>
-    </section>
 
-    <section class="section-jenis bg-abu">
-        <div class="container">
-            <div class="scientist-card">
-                <div class="scientist-img-box">
-                    <img src="whittaker.jpg" alt="R.H. Whittaker">
-                </div>
-                <div class="scientist-info">
-                    <h3>6. R.H. Whittaker (1969)</h3>
-                    <p>Mengembangkan 5 kingdom dan memasukan bakteri ke dalam kingdom monera.</p>
-                </div>
+        <div class="scientist-card section-jenis bg-abu" style="margin-bottom: 25px; border-radius: 8px; padding: 20px;">
+            <div class="scientist-img-box">
+                <img src="whittaker.jpg" alt="R.H. Whittaker">
+            </div>
+            <div class="scientist-info">
+                <h3>6. R.H. Whittaker (1969)</h3>
+                <p>Mengembangkan 5 kingdom dan memasukan bakteri ke dalam kingdom monera.</p>
             </div>
         </div>
-    </section>
 
-    <section class="section-jenis bg-putih">
-        <div class="container">
-            <div class="scientist-card">
-                <div class="scientist-img-box">
-                    <img src="carl.jpg" alt="Carl Woese">
-                </div>
-                <div class="scientist-info">
-                    <h3>7. Carl Woese (1977)</h3>
-                    <p>Membagi monera menjadi dua kingdom yaitu Archaebacteria (bakteri kuno) dan Eubacteria (bakteri modern/sejati) karena terdapat perbedaan ciri dan sifat antar keduanya.</p>
-                </div>
+        <div class="scientist-card section-jenis bg-abu" style="margin-bottom: 25px; border-radius: 8px; padding: 20px;">
+            <div class="scientist-img-box">
+                <img src="carl.jpg" alt="Carl Woese">
+            </div>
+            <div class="scientist-info">
+                <h3>7. Carl Woese (1977)</h3>
+                <p>Membagi monera menjadi dua kingdom yaitu Archaebacteria (bakteri kuno) dan Eubacteria (bakteri modern/sejati) karena terdapat perbedaan ciri dan sifat antar keduanya.</p>
             </div>
         </div>
+
     </section>
 
     <footer>
