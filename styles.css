@@ -17,6 +17,20 @@ nav a {
     transition: color 0.3s ease, transform 0.2s ease !important;
 }
 
+/* --- Efek Baru: Awal Elemen Sejarah (Transparan & Geser ke Kiri -20px) --- */
+.fade-left-item {
+    opacity: 0;
+    transform: translateX(-30px); /* Geser ke kiri */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+/* --- Kondisi Setelah Aktif Di-scroll (Kembali ke Posisi Normal) --- */
+.fade-left-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* General Styling */
 * {
   margin: 0;
