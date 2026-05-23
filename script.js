@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- 1. DETEKSI ELEMEN SEJARAH (DARI KIRI KE KANAN) ---
     // Cari kotak/kartu sejarah kamu (misal kelasnya .sejarah-card, .timeline-item, atau sesuaikan)
     // Di sini saya targetkan elemen di halaman sejarah yang ingin digeser dari kiri
-    const sejarahElements = document.querySelectorAll('.sejarah-item, .timeline-box, .ilmuwan-card');
+    const sejarahElements = document.querySelectorAll('.sejarah-item, .timeline-box, .scientist-card');
     
     sejarahElements.forEach(element => {
         element.classList.add('fade-left-item');
