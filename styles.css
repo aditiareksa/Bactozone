@@ -314,51 +314,100 @@ body.halaman-sejarah {
 
 @media screen and (max-width: 768px) {
     
-    /* 1. Mengubah susunan Menu Navigasi agar tidak tabrakan */
+    /* 1. Perbaikan Navigasi Atas */
     .header-content {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
         text-align: center;
+        padding: 10px !important;
     }
 
     nav ul {
         justify-content: center;
         padding: 0;
+        gap: 15px;
     }
 
-    /* 2. Mengubah susunan Maskot & Pengantar di atas */
-    .content-grid {
+    /* 2. Perbaikan Area Maskot & Header Pengantar */
+    .content-grid, .hero-container {
         flex-direction: column !important;
         text-align: center;
         gap: 15px;
+        padding: 10px !important;
     }
 
     .maskot-container, .hero-maskot {
         margin: 0 auto;
     }
 
-    /* 3. Mengubah susunan Kartu Ilmuwan & Tentang dari Samping menjadi Atas-Bawah */
-    .scientist-card, .tentang-card {
-        flex-direction: column !important; /* Foto jadi di atas, teks di bawah */
-        text-align: center;
-        padding: 20px 15px !important;
+    /* 3. PERBAIKAN UTAMA HALAMAN JENIS (Mencegah Teks Terpotong) */
+    .section-jenis {
+        padding: 15px 10px !important;
     }
 
-    /* 4. Menyesuaikan ukuran kotak foto ilmuwan agar pas di layar HP */
+    .sub-section {
+        padding: 15px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Memaksa template bakteri di dalam sub-section menyusun ke bawah, bukan ke samping */
+    .bakteri-template {
+        flex-direction: column !important; 
+        align-items: center !important;
+        gap: 15px !important;
+        padding: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Wadah foto bakteri diatur di tengah */
+    .bakteri-img-box {
+        width: 140px !important;
+        height: 140px !important;
+        margin: 0 auto !important;
+        flex-shrink: 0;
+    }
+
+    /* Menghilangkan paksaan lebar teks agar bisa mengalir bebas ke bawah */
+    .bakteri-info {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .bakteri-info h3 {
+        font-size: 1.3rem !important;
+        text-align: center !important;
+        word-wrap: break-word; /* Mencegah nama ilmiah bakteri yang panjang meluber keluar */
+    }
+
+    .bakteri-info p {
+        font-size: 0.95rem !important;
+        text-align: justify !important; /* Teks bacaan rapi rata kanan-kiri di HP */
+        line-height: 1.5 !important;
+    }
+
+    /* 4. Perbaikan Halaman Sejarah & Tentang */
+    .scientist-card, .tentang-card {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 20px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
     .scientist-img-box {
         width: 120px !important;
         height: 120px !important;
-        margin: 0 auto 10px auto; /* Ditengahkan otomatis */
+        margin: 0 auto 10px auto !important;
     }
 
-    /* 5. Mengatur font judul agar tidak terlalu besar di HP */
     .scientist-info h3, .tentang-info h3 {
         font-size: 1.2rem !important;
         margin-top: 10px;
     }
 
     .scientist-info p, .tentang-info p {
-        font-size: 0.95rem;
-        text-align: justify; /* Biar teks bacaannya rapi rata kanan-kiri di HP */
+        font-size: 0.95rem !important;
+        text-align: justify !important;
     }
 }
