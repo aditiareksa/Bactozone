@@ -312,7 +312,53 @@ body.halaman-sejarah {
     font-size: 0.95rem;
 }
 
-@media (max-width: 768px) {
-    .bakteri-template { flex-direction: column; align-items: flex-start; }
-    .bakteri-img-box { width: 100%; height: 180px; }
+@media screen and (max-width: 768px) {
+    
+    /* 1. Mengubah susunan Menu Navigasi agar tidak tabrakan */
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        padding: 0;
+    }
+
+    /* 2. Mengubah susunan Maskot & Pengantar di atas */
+    .content-grid {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .maskot-container, .hero-maskot {
+        margin: 0 auto;
+    }
+
+    /* 3. Mengubah susunan Kartu Ilmuwan & Tentang dari Samping menjadi Atas-Bawah */
+    .scientist-card, .tentang-card {
+        flex-direction: column !important; /* Foto jadi di atas, teks di bawah */
+        text-align: center;
+        padding: 20px 15px !important;
+    }
+
+    /* 4. Menyesuaikan ukuran kotak foto ilmuwan agar pas di layar HP */
+    .scientist-img-box {
+        width: 120px !important;
+        height: 120px !important;
+        margin: 0 auto 10px auto; /* Ditengahkan otomatis */
+    }
+
+    /* 5. Mengatur font judul agar tidak terlalu besar di HP */
+    .scientist-info h3, .tentang-info h3 {
+        font-size: 1.2rem !important;
+        margin-top: 10px;
+    }
+
+    .scientist-info p, .tentang-info p {
+        font-size: 0.95rem;
+        text-align: justify; /* Biar teks bacaannya rapi rata kanan-kiri di HP */
+    }
 }
