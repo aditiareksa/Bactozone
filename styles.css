@@ -410,4 +410,43 @@ body.halaman-sejarah {
         font-size: 0.95rem !important;
         text-align: justify !important;
     }
+    /* 1. Memaksa susunan kotak bakteri menjadi Atas (Foto) - Bawah (Teks) */
+.bakteri-template {
+    display: flex !important;
+    flex-direction: column !important; /* Membuat susunan vertikal */
+    align-items: center !important;    /* Membuat foto otomatis di tengah */
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 2. Merapikan wadah foto bakteri agar posisinya pas di tengah */
+.bakteri-img-box {
+    width: 160px !important;
+    height: 160px !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+}
+
+/* 3. Membuat teks penjelasan di bawahnya melebar penuh dan rapi */
+.bakteri-info {
+    width: 100% !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+}
+
+.bakteri-info h3 {
+    margin-top: 0 !important;
+    color: #00796b !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 10px !important;
+}
+
+.bakteri-info p {
+    margin-bottom: 0 !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+    text-align: justify !important; /* Membuat paragraf rata kanan-kiri */
+}
 }
